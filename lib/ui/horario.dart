@@ -10,6 +10,13 @@ class HorarioPage extends StatefulWidget {
 class _HorarioPageState extends State<HorarioPage> {
   @override
   Widget build(BuildContext context) {
-    return Text(widget.day.toString());
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Horarios"),
+        centerTitle: true,
+        backgroundColor: Colors.deepOrange,
+      ),
+      body: SingleChildScrollView(),
+    );
   }
 }
