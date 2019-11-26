@@ -83,20 +83,21 @@ class Logado {
 }
 
 class Login {
-  int id;
-  String nome;
-  String senha;
-  String email;
-  String telefone;
-  String bairro;
-  String num_casa;
-  String ponto_ref;
-  String rua;
-  String token;
+  dynamic id;
+  dynamic nome;
+  dynamic senha;
+  dynamic email;
+  dynamic telefone;
+  dynamic bairro;
+  dynamic num_casa;
+  dynamic ponto_ref;
+  dynamic rua;
+  dynamic token;
+  dynamic admin;
 
-  Login();
 
-//  Login({this.id, this.nome, this.email, this.senha, this.telefone, this.bairro, this.num_casa, this.ponto_ref, this.rua});
+
+ Login({this.id, this.nome, this.email, this.senha, this.telefone, this.bairro, this.num_casa, this.ponto_ref, this.rua,this.token,this.admin});
 //  factory Login.fromJson(Map<String, dynamic> json) {
 //    return Login(
 //      id: json['id'],
@@ -125,16 +126,17 @@ class Login {
 //    return data;
 //  }
   Login.fromMap(Map map) {
-    id = int.parse(map[idLoginColumn]);
-    nome = map[nomeLoginColumn];
-    senha = map[senhaLoginColumn];
-    email = map[emailLoginColumn];
-    telefone = map[telefoneLoginColumn];
-    bairro = map[bairroLoginColumn];
-    num_casa = (map[num_casaLoginColumn]);
-    ponto_ref = map[ponto_refLoginColumn];
-    rua = map[ruaLoginColumn];
-    token = map[tokenLoginColumn];
+    id = map[id];
+    nome = map[nome];
+    senha = map[senha];
+    email = map[email];
+    telefone = map[telefone];
+    bairro = map[bairro];
+    num_casa = map[num_casa];
+    ponto_ref = map[ponto_ref];
+    rua = map[rua];
+    token = map[token];
+    admin = map[admin];
   }
 
   @override
@@ -142,3 +144,5 @@ class Login {
     return "Login(id: $id, name: $nome, email: $email, senha: $senha, telefone: $telefone, bairro: $bairro , num_casa: $num_casa, ponto_ref: $ponto_ref, rua: $rua  ,token: $token)";
   }
 }
+
+
